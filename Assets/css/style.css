@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border: 2px solid green; */
+}
+
+:root {
+    --bgPrimary: #4891ff;
+    --bgLight: #f4f4f6;
+    --bgDark: #111;
+    --txt-Primary: #4891ff;
+    --txt-Light: #f4f4f6;
+    --txt-Dark: #111;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-dark);
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* NavBar's CSS */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--bgPrimary); */
+}
+
+.navbar .container .main-menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar .main-menu ul li a {
+    padding: 1rem 2rem;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .main-menu ul li a:hover,
+.navbar .main-menu ul li:first-child a {
+    color: var(--txt-Primary);
+}
+
+.navbar .main-menu ul li:last-child a {
+    margin-left: 1.2rem;
+}
+
+/* Hero's CSS */
+.hero {
+    margin-bottom: 5rem;
+}
+
+.hero .container {
+    /* border: 2px solid red; */
+    background: url('../../Assets/images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    height: 550px;
+}
+
+.hero .hero-content {
+    width: 70%;
+    /* border: 2px solid red; */
+}
+
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 2rem;
+}
+
+/* Video's Css  */
+.video {
+    padding: 1rem 0 4rem;
+}
+
+.video .video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video .video-preview {
+    margin-bottom: 2rem;
+}
+
+/* Testimonials Css */
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonials .testimonials-heading {
+    width: 70rem;
+    margin-bottom: 4rem;
+}
+
+.testimonials .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonials-grid .card p:nth-child(2) {
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+.testimonials-grid .card p {
+    text-align: center;
+}
+
+/* Pricing's CSS */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.pricing .pricing-card-subheading {
+    margin-bottom: 3rem;
+}
+
+.pricing .pricing-card-price {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.pricing ul {
+    margin: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.pricing ul li i {
+    margin-right: 1rem;
+}
+
+.pricing .pricing-footer {
+    margin: 3rem 0;
+}
+
+/* FAQ */
+.faq {
+    padding: 4rem 0;
+}
+
+.faq-group {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+}
+
+.faq .faq-group .faq-group-header {
+    padding: 2rem 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.faq .faq-group .faq-group-header h4 {
+    font-weight: 800;
+    width: 90%;
+}
+
+.faq .faq-group .faq-group-header i {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.faq .faq-group .faq-group-body {
+    display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+    display: block;
+}
+
+.faq ul.faq-menu {
+    max-width: 40rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.faq ul.faq-menu li.active {
+    background-color: var(--bgPrimary);
+    color: #fff;
+}
+
+.footer {
+    padding: 4rem 0;
+}
+
+.footer h4 {
+    margin-bottom: 1rem;
+}
+
+.footer ul li {
+    line-height: 2.5;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card {
+    margin: 2rem 3rem 3rem 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    margin: 2rem 0;
+}
+
+/* Utility Classes */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Card's CSS */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1.3rem 2rem;
+    background-color: var(--bgLight);
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--bgPrimary);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--bgDark);
+    color: #fff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Text Classes */
+.text-xxl {
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 3.5rem;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 2.88rem;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.92rem;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 1.44rem;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-primary {
+    background: var(--bgPrimary);
+    color: #fff;
+}
+
+.bg-light {
+    background: var(--bgLight);
+    color: #333;
+}
+
+.bg-dark {
+    background: var(--bgDark);
+    color: #fff;
+}
+
+.bg-black {
+    background: #000;
+    color: #fff;
+}
+
+/* Hamburder Button  */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 3rem;
+    height: .3rem;
+    background: #333;
+    margin: .6rem 0;
+}
+
+/* Mobile Menu  */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    width: 25rem;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    /* border: 2px solid red; */
+    margin-top: 10rem;
+    padding-right: 2rem;
+}
+
+.mobile-menu ul li {
+    /* border: 2px solid red; */
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.mobile-menu ul li a {
+    /* border: 2px solid green; */
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* Media Quaries  */
+@media (max-width:960px) {
+    .text-xxl {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:670px) {
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .hero .container {
+        background: url('../images/hero-bg-mobile.png');
+        background-repeat: no-repeat;
+        background-size: 35rem 40rem;
+        background-position: bottom;
+        min-height: 770px;
+    }
+
+    .hero .hero-content,
+    .hero .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .hero-buttons .btn {
+        margin-bottom: 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    .testimonials .testimonials-heading {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .testimonials .testimonials-grid,
+    .pricing .pricing-grid,
+    .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .card {
+        margin-right: 0;
+    }
+
+    .footer .footer-grid>div {
+        text-align: center;
+    }
+
+    /* Text classes  */
+    .text-xl {
+        font-size: 3.4rem;
+    }
+
+    .text-lg {
+        font-size: 2.4rem;
+    }
+
+    .text-md {
+        font-size: 1.76rem;
+    }
+}
+
+@media (max-width:500px) {
+
+    .text-xxl {
+        font-size: 3.2rem;
+    }
+
+}

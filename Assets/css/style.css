@@ -129,8 +129,9 @@ img {
 }
 
 .testimonials .testimonials-grid {
+    width: 1400px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -215,6 +216,7 @@ img {
     max-width: 40rem;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background: #ddd;
@@ -282,6 +284,13 @@ img {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.5rem;
+}
+
+.container-scroll {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    overflow-x: scroll;
 }
 
 .container-sm {
@@ -408,6 +417,38 @@ img {
     margin: .6rem 0;
 }
 
+
+/* Scroll Bars CSS  */
+.container-scroll::-webkit-scrollbar {
+    /* background-color: #ffffff; */
+    height: 1.9rem;
+}
+
+.container-scroll::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    /* box-shadow: 3px 3px #0AD2FC; */
+    /* border: 2px solid #ffffff; */
+    background: #e7e7e7;
+
+
+    /* margin block is only suitable for the vertical Scrollbars to give the scroll bar marign from both top and bottom  */
+    margin-block: 2rem;
+
+    /* but to give margin to the horizontal scrollbars you have to use the below property which gives the amrgin from both left and right side.  */
+    margin-inline: 1rem;
+}
+
+.container-scroll::-webkit-scrollbar-thumb {
+    background: #0AD2FC;
+    background: var(--bgPrimary);
+    border-radius: 1rem;
+    border: 2px solid #e7e7e7;
+}
+
+.container-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--bgPrimary);
+}
+
 /* Mobile Menu  */
 .mobile-menu {
     position: fixed;
@@ -482,6 +523,14 @@ img {
     .testimonials .testimonials-heading {
         max-width: 100%;
         text-align: center;
+    }
+
+    .testimonials .container-scroll {
+        overflow-x: hidden;
+    }
+
+    .testimonials .testimonials-grid {
+        width: 100%;
     }
 
     .testimonials .testimonials-grid,
